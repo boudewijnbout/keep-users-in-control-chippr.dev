@@ -1,0 +1,34 @@
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 12rem;
+    height: 100%;
+    background-color: #262626;
+    color: #fff;
+}
+
+.sidebar-logo-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-align: center;
+}
+
+aside svg {
+    fill: #fff;
+}
+
+/* Sidebar Nav Menu */
+aside ul li {
+    list-style: none;
+    background-color: var(--accent-bg);
+    margin-top: 2rem;
+    margin-left: 1.25rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
