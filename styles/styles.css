@@ -20,6 +20,7 @@ body{
   font-size: 2em;
 }
 .error h1 , h2 ,p {
+  font-family: 'Inter', sans-serif;
   color: var(--secondary-bg);
   letter-spacing: .13em;
   margin: .025em 0;
@@ -44,13 +45,17 @@ body{
 }
 
 .error button{
-  width:8em;
+  width:10em;
   height: 3em;
   border-style: none;
-  border-radius: 3.4px;
+  border-radius: 2em;
+  color: var(--main-bg);
   background-color: var(--secondary-bg);
   margin-top: 1em;
 }
+ .error button:hover{
+   cursor: pointer;
+ }
 
 @keyframes smiley{
   from {
@@ -60,5 +65,22 @@ body{
   to {
     transform: translatey(-.15em);
   }
+
+
 }
 
+ @media (max-width: 50rem){
+
+  .error h1{
+    font-size: 6em;
+  }
+
+  .error svg{
+    width: 0.8em;
+  }
+
+  .error{
+    font-size: 1em;
+  }
+
+ }
