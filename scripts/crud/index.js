@@ -25,7 +25,7 @@ function fillProjectsTable(projects) {
                             <p>${project.id}</p>
                         </td>
                         <td>
-                            <a href="edit.html?id=${project.id}">${project.logo}</a>
+                            <a href="edit.html?id=${project.id}"><img src="${project.logo}"></a>
                         </td>
                         <td>
                             <p>${project.title}</p>
