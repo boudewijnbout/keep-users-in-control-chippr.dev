@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,39 +19,37 @@
     <title>CRUD | Overzicht</title>
   </head>
   <body>
-
     <!-- Main Content -->
     <main>
-      <h1><a href="index.html"><span>Projecten /</span></a> Toevoegen</h1>
+      <h1>
+        <a href="index.html"><span>Projecten /</span></a> Toevoegen
+      </h1>
 
       <section>
-        <form action="" method="POST">
-
+        <form action="http://localhost:3000/projects" method="POST">
           <div class="form-group">
             <label for="title">Titel</label>
-            <input type="text" name="title" id="title">
+            <input type="text" name="title" id="title" />
           </div>
           <div class="form-group">
             <label for="slug">Slug</label>
-            <input type="text" name="slug" id="slug">
+            <input type="text" name="slug" id="slug" />
           </div>
           <div class="form-group">
             <label for="description">Omschrijving</label>
-            <input type="text" name="description" id="description">
+            <input type="text" name="description" id="description" />
           </div>
           <div class="form-group">
             <label for="logo">Logo</label>
-            <input type="text" name="logo" id="logo">
+            <input type="text" name="logo" id="logo" />
           </div>
 
           <button type="submit">Project toevoegen</button>
-
         </form>
       </section>
 
       <!-- Sidebar -->
       <aside>
-
         <!-- Logo Wrapper -->
         <div class="sidebar-logo-wrapper">
           <svg
