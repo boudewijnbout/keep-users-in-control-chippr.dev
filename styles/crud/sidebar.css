@@ -22,7 +22,7 @@ aside svg {
     fill: #fff;
 }
 
-/* Sidebar Nav Menu */
+/* Sidebar Nav Menu Link */
 aside ul li {
     list-style: none;
     background-color: var(--accent-bg);
@@ -31,4 +31,8 @@ aside ul li {
     border-top-left-radius: 1.25rem;
     border-bottom-left-radius: 1.25rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+aside ul li a {
+    color: #262626
 }
