@@ -90,6 +90,7 @@ header svg {
 .hero_section {
 	display: flex;
 	justify-content: center;
+    align-items: center;
 	flex-direction: column;
 	margin-top: 70px;
 	color: var(--secondary-bg);
@@ -98,13 +99,12 @@ header svg {
 }
 
 .hero_section img {
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10em;
+
+/* padding: 10em; */
 margin-top: -7em;
-border-radius: 12em;
-height: 65em;
+border-radius: 3em;
+height: 70vh;
+width: 75vw;
 
 }
 
@@ -116,14 +116,29 @@ height: 65em;
 }
 
 .hero_section :nth-child(2) {
+    position: absolute;
+    bottom: 5%;
+    left: 7%;
 	background-color: var(--accent-bg);
-    display: flex;
-    justify-content: center;
-    margin: 7em;
-    margin-top: -12em;
-    margin-left: 3em;
-    width: 27vw;
-    height:28vh;
-    border-radius: 1em;
+    height: 25vh;
+    width: 30vw;
+    margin-top: -5em;
+    
+   
+    border-radius: 2em;
+   
 }
 
+@media (max-width: 50rem){
+    .hero_section img{
+        height: 60vh;
+        width: 90vw;
+    }
+    .hero_section :nth-child(2){
+       position: relative;
+       bottom: -9%;
+       width: 65vw;
+       margin-right: 2.5em;
+    }
+
+}
