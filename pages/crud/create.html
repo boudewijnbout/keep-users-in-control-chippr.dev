@@ -8,6 +8,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../../styles/crud/create.css" />
     <link rel="stylesheet" href="../../styles/crud/sidebar.css" />
+    <link rel="stylesheet" href="../../styles/crud/form.css" />
 
     <!-- Fonts -->
     <link
@@ -16,7 +17,7 @@
     />
 
     <!-- Page Title -->
-    <title>CRUD | Overzicht</title>
+    <title>CRUD | Toevoegen</title>
   </head>
   <body>
     <!-- Main Content -->
@@ -25,25 +26,38 @@
         <a href="index.html"><span>Projecten /</span></a> Toevoegen
       </h1>
 
-      <section>
-        <form action="http://localhost:3000/projects" method="POST">
+      <!-- Add Project Form -->
+      <section class="create-project-form-wrapper">
+        <form
+          id="create-project-form"
+          action="http://localhost:3000/projects"
+          method="POST"
+        >
+          <!-- Title Input -->
           <div class="form-group">
-            <label for="title">Titel</label>
+            <label for="title">Titel:</label>
             <input type="text" name="title" id="title" />
           </div>
+
+          <!-- Slug Input -->
           <div class="form-group">
-            <label for="slug">Slug</label>
+            <label for="slug">Slug:</label>
             <input type="text" name="slug" id="slug" />
           </div>
+
+          <!-- Description Input -->
           <div class="form-group">
-            <label for="description">Omschrijving</label>
+            <label for="description">Omschrijving:</label>
             <input type="text" name="description" id="description" />
           </div>
+
+          <!-- Logo Input -->
           <div class="form-group">
-            <label for="logo">Logo</label>
+            <label for="logo">Logo:</label>
             <input type="text" name="logo" id="logo" />
           </div>
 
+          <!-- Add Project Button -->
           <button type="submit">Project toevoegen</button>
         </form>
       </section>

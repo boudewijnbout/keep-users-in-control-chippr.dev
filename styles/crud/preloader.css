@@ -1,0 +1,41 @@
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+
+/* Variables */
+:root {
+  --main-bg: #262626;
+  --secondary-bg: #f8f4f1;
+  --accent-bg: #f7c117;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+}
+
+.preloader-left-column,
+.preloader-right-column {
+  background-color: var(--main-bg);
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 600ms;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+}
+
+/* Preloader Logo */
+.preloader svg {
+  fill: red;
+}
+
+.preloader h1 {
+  color: #fff;
+}

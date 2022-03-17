@@ -46,20 +46,20 @@ a {
 --------------------------------------------------------------*/
 
 main {
-  /* padding: 3rem;
-  margin-left: 12rem; */
+  /* padding: 3rem; */
+  /* margin-left: 12rem; */
   padding: 1.5rem;
 }
 
-main h1 span {
+main h1 span:nth-child(1) {
   color: var(--accent-bg);
 }
 
 /*--------------------------------------------------------------
-# Add Project Form
+# Edit Project Form
 --------------------------------------------------------------*/
 
-.create-project-form-wrapper {
+.edit-project-form-wrapper {
   background-color: #fff;
   max-width: 48rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

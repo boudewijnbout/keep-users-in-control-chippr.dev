@@ -8,6 +8,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../../styles/crud/style.css" />
     <link rel="stylesheet" href="../../styles/crud/sidebar.css" />
+    <link rel="stylesheet" href="../../styles/crud/preloader.css" />
 
     <!-- Fonts -->
     <link
@@ -19,12 +20,20 @@
     <title>CRUD | Overzicht</title>
   </head>
   <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-left-column">
+        <h1>Loading...</h1>
+      </div>
+
+      <div class="preloader-right-column"></div>
+    </div>
+
     <!-- Main Content -->
     <main>
-      <h1>Projecten</h1>
-
       <!-- Add Project Button -->
       <section class="add-project-btn-wrapper">
+        <h1>Projecten</h1>
         <a href="create.html">Project toevoegen</a>
       </section>
 
@@ -34,7 +43,7 @@
           <tr>
             <th>ID</th>
             <th>Logo</th>
-            <th>Titel</th>
+            <th>Naam</th>
             <th>Slug</th>
             <th>Omschrijving</th>
           </tr>

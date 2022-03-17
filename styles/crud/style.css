@@ -48,8 +48,11 @@ a {
 --------------------------------------------------------------*/
 
 main {
-  padding: 3rem;
-  margin-left: 12rem;
+  padding: 1.5rem;
+}
+
+main h1 {
+  font-size: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -58,7 +61,7 @@ main {
 
 /* Main Table Wrapper */
 .main-table-wrapper {
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 /* Main Table */
@@ -68,8 +71,7 @@ main {
   background-color: #fff;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
   border-radius: 0.375rem;
-  border-collapse: collapse;
-}
+  border-collapse: collapse;}
 
 /* Main Table Header */
 .main-table-wrapper table tr th {
@@ -89,13 +91,21 @@ main {
   padding: 0.75rem 1.5rem 0.75rem 1.5rem;
 }
 
+/* Main Table Column Image */
+.main-table-wrapper table img {
+  max-width: 4rem;
+  width: 4rem;
+  height: auto;
+}
+
 /*--------------------------------------------------------------
 # Add Project Button Wrapper
 --------------------------------------------------------------*/
 
 .add-project-btn-wrapper {
-  justify-content: end;
   display: flex;
+  /*align-items: center;*/
+  flex-direction: column;
 }
 
 .add-project-btn-wrapper a {
@@ -105,4 +115,39 @@ main {
   background-color: var(--accent-bg);
   color: #262626;
   font-size: 0.9rem;
+  transition: all 200ms;
+  align-self: flex-start;
+}
+
+.add-project-btn-wrapper a:hover {
+  background: #e8b617;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.add-project-btn-wrapper a:active {
+  transform: translateY(-1px) scale(0.95);
+}
+
+/*--------------------------------------------------------------
+# Media Query's
+--------------------------------------------------------------*/
+
+@media (min-width: 30rem) {
+  .add-project-btn-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 60rem) {
+  main {
+    padding: 3rem;
+    margin-left: 12rem;
+  }
+
+  .add-project-btn-wrapper {
+    justify-content: space-between;
+    align-items: center;
+  }
 }

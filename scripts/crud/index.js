@@ -1,6 +1,9 @@
 // Define Elements
 const projectsTable = document.querySelector("table");
-const apiUrl = "http://localhost:3000/projects";
+const apiUrl = "https://chipr.api.fdnd.nl/projects";
+const preloaderLeft = document.querySelector(".preloader-left-column");
+const preloaderRight = document.querySelector(".preloader-right-column");
+const preloader = document.querySelector(".preloader");
 
 fetch(apiUrl)
   .then((res) => {
@@ -11,6 +14,7 @@ fetch(apiUrl)
 
     // Call Functions
     fillProjectsTable(projects);
+    hidePreloader();
   });
 
 // Fill Projects Table
@@ -36,8 +40,16 @@ function fillProjectsTable(projects) {
                         <td>
                             <p>${project.description}</p> 
                         </td>
-                  </tbody>
+                     </tr>
                 `
     );
   });
+}
+
+function hidePreloader() {
+  setTimeout(() => {
+    preloaderLeft.style.transform = "translateX(-100%)";
+    preloaderRight.style.transform = "translateX(100%)";
+    preloader.style.visibility = "hidden";
+  }, 1200);
 }
