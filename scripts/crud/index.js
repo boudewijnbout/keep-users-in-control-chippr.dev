@@ -1,6 +1,6 @@
 // Define Elements
 const projectsTable = document.querySelector("table");
-const apiUrl = "http://localhost:3000/projects";
+const apiUrl = "https://chipr.api.fdnd.nl/projects";
 const preloader = document.querySelector(".preloader");
 
 fetch(apiUrl)
