@@ -25,7 +25,7 @@ body {
 body {
 	font-family: "Inter", sans-serif;
 }
-
+ 
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -141,4 +141,24 @@ width: 75vw;
        margin-right: 2.5em;
     }
 
+}
+
+/*--------------------------------------------------------------
+# main
+--------------------------------------------------------------*/
+main{
+	background-color: var(--secondary-bg);
+}
+.Beyco{
+	height: 100vh;
+}
+
+.Beyco_title{
+	display: flex;
+	justify-content: center;
+	background-color: var(--accent-bg);
+	margin-top: 3em;
+	width: 60vw;
+	height: 20vh;
+	border-radius: 1em;
 }
