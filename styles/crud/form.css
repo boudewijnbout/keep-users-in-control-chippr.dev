@@ -7,23 +7,29 @@ form {
 /* Form Input & Label Wrapper */
 .form-group {
   width: 100%;
-  /* width: 50%; */
   margin-bottom: 2rem;
-  /* padding-right: 1.5rem; */
 }
 
+/* Form Label */
 .form-group label {
-  display: inline-block;
+  display: block;
   margin-bottom: 0.5rem;
 }
 
-.form-group input {
+.form-group input,
+textarea {
   width: 100%;
   border-radius: 0.25rem;
   border: 1px solid #e2e2e2;
   line-height: 1.5;
   padding: 0.5rem;
   font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 20vh;
 }
 
 /* Form Submit Button */
@@ -43,7 +49,7 @@ form button {
 
 @media (min-width: 40rem) {
   .form-group {
-    width: 50%;
+    width: 100%;
     padding-right: 1.5rem;
   }
 }

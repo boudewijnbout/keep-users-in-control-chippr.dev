@@ -1,6 +1,6 @@
 // Define Elements
 const projectsTable = document.querySelector("table");
-const apiUrl = "https://chipr.api.fdnd.nl/projects";
+const apiUrl = "http://localhost:3000/projects";
 const preloader = document.querySelector(".preloader");
 
 fetch(apiUrl)
@@ -18,9 +18,10 @@ fetch(apiUrl)
 // Fill Projects Table
 function fillProjectsTable(projects) {
   projects.forEach((project) => {
-    let test = `${project.description}...`;
-
-    if (test.length > 10) test = test.substring(0, 30);
+    // Limit the short description to 20 characters.
+    let shortDescription = project.short_description;
+    if (shortDescription.length > 10)
+      shortDescription = `${shortDescription.substring(0, 20)}...`;
 
     // Render a HTML table
     projectsTable.insertAdjacentHTML(
@@ -34,13 +35,13 @@ function fillProjectsTable(projects) {
                             <a href="edit.html?id=${project.id}"><img src="${project.logo}"></a>
                         </td>
                         <td>
-                            <p>${project.title}</p>
+                            <p>${project.name}</p>
                         </td>
                         <td>
-                            <p>${project.slug}</p>
+                            <p>${shortDescription}</p>
                         </td>
                         <td>
-                            <p>${test}</p> 
+                            <a href="${project.link}">${project.link}</a> 
                         </td>
                      </tr>
                 `

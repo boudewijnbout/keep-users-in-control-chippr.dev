@@ -7,13 +7,12 @@ createProjectForm.addEventListener("submit", function (e) {
 
   // Create a data object with data from the create form.
   let data = {
-    title: document.querySelector("#title").value,
-    slug: document.querySelector("#slug").value,
+    name: document.querySelector("#name").value,
+    slug: document.querySelector("#shortDescription").value,
     description: document.querySelector("#description").value,
     logo: document.querySelector("#logo").value,
+    mainImage: document.querySelector("#mainImage").value,
   };
-
-  // console.log(JSON.stringify(data));
 
   fetch(apiUrl, {
     method: "POST",
