@@ -1,5 +1,7 @@
 const createProjectForm = document.querySelector("#create-project-form");
 const apiUrl = "https://chipr.api.fdnd.nl/projects";
+const alertSuccess = document.querySelector(".alert-success");
+const alertError = document.querySelector(".alert-error");
 
 // Create a submit listener
 createProjectForm.addEventListener("submit", function (e) {
@@ -20,9 +22,28 @@ createProjectForm.addEventListener("submit", function (e) {
     body: JSON.stringify(data),
   })
     .then(function (res) {
-      location.replace("http://127.0.0.1:5500/pages/crud/index.html");
+      // Show success message
+      alertSuccess.innerText = "Gelukt! Project is toegevoegd.";
+      alertSuccess.style.display = "inline-block";
+
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
 
       return res.json;
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      // Show error message
+
+      alertError.innerText = "Oops, project is niet toegevoegd.";
+      alertError.style.display = "inline-block";
+
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
 });

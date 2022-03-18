@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../styles/crud/create.css" />
     <link rel="stylesheet" href="../../styles/crud/sidebar.css" />
     <link rel="stylesheet" href="../../styles/crud/form.css" />
+    <link rel="stylesheet" href="../../styles/crud/alert.css" />
 
     <!-- Fonts -->
     <link
@@ -26,6 +27,9 @@
         <a href="index.html"><span>Projecten /</span></a> Toevoegen
       </h1>
 
+      <div class="alert alert-success"></div>
+      <div class="alert alert-error"></div>
+
       <!-- Add Project Form -->
       <section class="create-project-form-wrapper">
         <form
@@ -36,31 +40,35 @@
           <!-- Title Input -->
           <div class="form-group">
             <label for="name">Bedrijfsnaam:</label>
-            <input type="text" name="name" id="name" />
+            <input required type="text" name="name" id="name" />
           </div>
 
           <!-- Slug Input -->
           <div class="form-group">
             <label for="shortDescription">Korte omschrijving:</label>
-            <textarea name="shortDescription" id="shortDescription"></textarea>
+            <textarea
+              required
+              name="shortDescription"
+              id="shortDescription"
+            ></textarea>
           </div>
 
           <!-- Description Input -->
           <div class="form-group">
             <label for="description">Volledige omschrijving:</label>
-            <textarea name="description" id="description"></textarea>
+            <textarea required name="description" id="description"></textarea>
           </div>
 
           <!-- Logo Input -->
           <div class="form-group">
             <label for="logo">Logo:</label>
-            <input type="text" name="logo" id="logo" />
+            <input required type="text" name="logo" id="logo" />
           </div>
 
           <!-- `Banner Input -->
           <div class="form-group">
             <label for="mainImage">Banner afbeelding:</label>
-            <input type="text" name="mainImage" id="mainImage" />
+            <input required type="text" name="mainImage" id="mainImage" />
           </div>
 
           <!-- Add Project Button -->
