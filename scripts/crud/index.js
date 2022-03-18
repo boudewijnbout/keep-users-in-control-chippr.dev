@@ -1,8 +1,6 @@
 // Define Elements
 const projectsTable = document.querySelector("table");
 const apiUrl = "https://chipr.api.fdnd.nl/projects";
-const preloaderLeft = document.querySelector(".preloader-left-column");
-const preloaderRight = document.querySelector(".preloader-right-column");
 const preloader = document.querySelector(".preloader");
 
 fetch(apiUrl)
@@ -20,6 +18,10 @@ fetch(apiUrl)
 // Fill Projects Table
 function fillProjectsTable(projects) {
   projects.forEach((project) => {
+    let test = `${project.description}...`;
+
+    if (test.length > 10) test = test.substring(0, 30);
+
     // Render a HTML table
     projectsTable.insertAdjacentHTML(
       "beforeend",
@@ -38,7 +40,7 @@ function fillProjectsTable(projects) {
                             <p>${project.slug}</p>
                         </td>
                         <td>
-                            <p>${project.description}</p> 
+                            <p>${test}</p> 
                         </td>
                      </tr>
                 `
@@ -48,8 +50,7 @@ function fillProjectsTable(projects) {
 
 function hidePreloader() {
   setTimeout(() => {
-    preloaderLeft.style.transform = "translateX(-100%)";
-    preloaderRight.style.transform = "translateX(100%)";
     preloader.style.visibility = "hidden";
+    preloader.style.opacity = "0";
   }, 1200);
 }

@@ -17,25 +17,83 @@
   height: 100%;
   z-index: 1;
   display: flex;
-}
-
-.preloader-left-column,
-.preloader-right-column {
-  background-color: var(--main-bg);
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: all 600ms;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
-  display: flex;
+  background-color: var(--main-bg);
+  flex-direction: column;
+  transition: all 300ms;
 }
 
 /* Preloader Logo */
 .preloader svg {
-  fill: red;
+  fill: #fff;
+  max-width: 70%;
 }
 
-.preloader h1 {
-  color: #fff;
+/* Loading Dots */
+.lds-ellipsis {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  width: 0.813rem;
+  height: 0.813rem;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 0.5rem;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 0.5rem;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 2rem;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 3.5rem;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+/* Loading Dots Animation */
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/*--------------------------------------------------------------
+# Media Query's
+--------------------------------------------------------------*/
+
+@media (min-width: 30rem) {
 }
