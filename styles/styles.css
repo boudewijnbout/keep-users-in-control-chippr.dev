@@ -159,7 +159,7 @@ main{
 	background-color: var(--accent-bg);
 	margin-top: 3em;
 	width: 60vw;
-	height: 18vh;
+	height: 21vh;
 	border-radius: 1em;
 }
 .Beyco_title h2{
@@ -189,13 +189,13 @@ main{
 	}
 	@media (max-width:30rem){
 		.Beyco_title{
-			height: 20vh;
+			height: 25vh;
 		}
 	}
 	@media (max-width:70rem){
 		.Beyco_title{
 		  padding: .5em;
-		  height: 27vh;
+		  height: 22vh;
 		}
 	   
 	  }
