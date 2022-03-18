@@ -123,9 +123,7 @@ width: 75vw;
     height: 25vh;
     width: 30vw;
     margin-top: -5em;
-    
-   
-    border-radius: 2em;
+	 border-radius: 2em;
    
 }
 
@@ -155,10 +153,49 @@ main{
 
 .Beyco_title{
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+    margin-left: -2em;
 	background-color: var(--accent-bg);
 	margin-top: 3em;
 	width: 60vw;
-	height: 20vh;
+	height: 18vh;
 	border-radius: 1em;
 }
+.Beyco_title h2{
+  padding: .4em;
+
+}
+.Beyco_title p{
+	font-size:22px;
+	padding-left: 2em;
+}
+
+.Beyco_title h2::before{
+		content: '';
+		display: inline-block;
+		width: 4px;
+		height: 25px;
+		background-color: #fff;
+		margin-right: 0.5rem;
+		position: relative;
+		top: 3px;
+	}
+
+	@media (max-width: 50rem){
+		.Beyco_title{
+		width: 90vw;
+	    }
+	}
+	@media (max-width:30rem){
+		.Beyco_title{
+			height: 20vh;
+		}
+	}
+	@media (max-width:70rem){
+		.Beyco_title{
+		  padding: .5em;
+		  height: 27vh;
+		}
+	   
+	  }
