@@ -10,10 +10,11 @@ createProjectForm.addEventListener("submit", function (e) {
   // Create a data object with data from the create form.
   let data = {
     name: document.querySelector("#name").value,
-    slug: document.querySelector("#shortDescription").value,
+    short_description: document.querySelector("#short_description").value,
     description: document.querySelector("#description").value,
     logo: document.querySelector("#logo").value,
-    mainImage: document.querySelector("#mainImage").value,
+    link: document.querySelector("#link").value,
+    main_img: document.querySelector("#main_img").value,
   };
 
   fetch(apiUrl, {
@@ -22,7 +23,7 @@ createProjectForm.addEventListener("submit", function (e) {
     body: JSON.stringify(data),
   })
     .then(function (res) {
-      // Show success message
+      // // Show success message
       alertSuccess.innerText = "Gelukt! Project is toegevoegd.";
       alertSuccess.style.display = "inline-block";
 

@@ -4,10 +4,11 @@ const projectName = document.querySelector("main h1 span:nth-child(2)");
 
 const nameInput = document.querySelector(".form-group #name");
 const shortDescription = document.querySelector(
-  ".form-group #shortDescription"
+  ".form-group #short_description"
 );
 const descriptionInput = document.querySelector(".form-group #description");
 const logoInput = document.querySelector(".form-group #logo");
+const main_img = document.querySelector(".form-group #main_img");
 const idInput = document.querySelector("#id");
 const updateProjectForm = document.querySelector("#edit-project-form");
 const apiUrl = "https://chipr.api.fdnd.nl/projects";
@@ -39,7 +40,7 @@ async function setFormData() {
   shortDescription.value = `${project.short_description}`;
   descriptionInput.value = `${project.description}`;
   logoInput.value = `${project.logo}`;
-  mainImage.value = `${project.main_img}`;
+  main_img.value = `${project.main_img}`;
 }
 
 // Listens for submits on the update form
@@ -50,10 +51,11 @@ updateProjectForm.addEventListener("submit", function (e) {
   let data = {
     id: document.querySelector("#id").value,
     name: document.querySelector("#name").value,
-    shortDescription: document.querySelector("#shortDescription").value,
+    short_description: document.querySelector("#short_description").value,
     description: document.querySelector("#description").value,
     logo: document.querySelector("#logo").value,
-    mainImage: document.querySelector("#mainImage").value,
+    link: document.querySelector("#link").value,
+    main_img: document.querySelector("#main_img").value,
   };
 
   // PATCH the new data to the API

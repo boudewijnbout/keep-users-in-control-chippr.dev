@@ -27,6 +27,7 @@
         <a href="index.html"><span>Projecten /</span></a> Toevoegen
       </h1>
 
+      <!-- Alerts -->
       <div class="alert alert-success"></div>
       <div class="alert alert-error"></div>
 
@@ -34,7 +35,7 @@
       <section class="create-project-form-wrapper">
         <form
           id="create-project-form"
-          action="http://localhost:3000/projects"
+          action="https://chipr.api.fdnd.nl/projects"
           method="POST"
         >
           <!-- Title Input -->
@@ -48,8 +49,8 @@
             <label for="shortDescription">Korte omschrijving:</label>
             <textarea
               required
-              name="shortDescription"
-              id="shortDescription"
+              name="short_description"
+              id="short_description"
             ></textarea>
           </div>
 
@@ -65,10 +66,16 @@
             <input required type="text" name="logo" id="logo" />
           </div>
 
+          <!-- Link Input -->
+          <div class="form-group">
+            <label for="link">Link:</label>
+            <input required type="text" name="link" id="link" />
+          </div>
+
           <!-- `Banner Input -->
           <div class="form-group">
-            <label for="mainImage">Banner afbeelding:</label>
-            <input required type="text" name="mainImage" id="mainImage" />
+            <label for="main_img">Banner afbeelding:</label>
+            <input required type="text" name="main_img" id="main_img" />
           </div>
 
           <!-- Add Project Button -->
