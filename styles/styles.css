@@ -25,7 +25,7 @@ body {
 body {
 	font-family: "Inter", sans-serif;
 }
- 
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -90,7 +90,7 @@ header svg {
 .hero_section {
 	display: flex;
 	justify-content: center;
-    align-items: center;
+	align-items: center;
 	flex-direction: column;
 	margin-top: 70px;
 	color: var(--secondary-bg);
@@ -99,103 +99,107 @@ header svg {
 }
 
 .hero_section img {
-
-/* padding: 10em; */
-margin-top: -7em;
-border-radius: 3em;
-height: 70vh;
-width: 75vw;
-
+	/* padding: 10em; */
+	margin-top: -7em;
+	border-radius: 3em;
+	height: 70vh;
+	width: 75vw;
 }
 
 .hero_section h1 {
 	display: flex;
 	justify-content: center;
-    padding: 1em;
+	padding: 1em;
 	color: var(--main-bg);
 }
 
 .hero_section :nth-child(2) {
-    position: absolute;
-    bottom: 5%;
-    left: 7%;
+	position: absolute;
+	bottom: 5%;
+	left: 7%;
 	background-color: var(--accent-bg);
-    height: 25vh;
-    width: 30vw;
-    margin-top: -5em;
-	 border-radius: 2em;
-   
+	height: 25vh;
+	width: 30vw;
+	margin-top: -5em;
+	border-radius: 2em;
 }
 
-@media (max-width: 50rem){
-    .hero_section img{
-        height: 60vh;
-        width: 90vw;
-    }
-    .hero_section :nth-child(2){
-       position: relative;
-       bottom: -9%;
-       width: 65vw;
-       margin-right: 2.5em;
-    }
-
+@media (max-width: 50rem) {
+	.hero_section img {
+		height: 60vh;
+		width: 90vw;
+	}
+	.hero_section :nth-child(2) {
+		position: relative;
+		bottom: -9%;
+		width: 65vw;
+		margin-right: 2.5em;
+	}
 }
 
 /*--------------------------------------------------------------
 # main
 --------------------------------------------------------------*/
-main{
+main {
 	background-color: var(--secondary-bg);
 }
-.Beyco{
+.Beyco {
 	height: 100vh;
 }
 
-.Beyco_title{
+.Beyco_title {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-    margin-left: -2em;
+	margin-left: -2em;
 	background-color: var(--accent-bg);
 	margin-top: 3em;
 	width: 60vw;
 	height: 21vh;
 	border-radius: 1em;
 }
-.Beyco_title h2{
-  padding: .4em;
-
+.Beyco_title h2 {
+	padding: 0.4em;
 }
-.Beyco_title p{
-	font-size:22px;
+.Beyco_title p {
+	font-size: 22px;
 	padding-left: 2em;
 }
 
-.Beyco_title h2::before{
-		content: '';
-		display: inline-block;
-		width: 4px;
-		height: 25px;
-		background-color: #fff;
-		margin-right: 0.5rem;
-		position: relative;
-		top: 3px;
-	}
+.Beyco_title h2::before {
+	content: "";
+	display: inline-block;
+	width: 4px;
+	height: 25px;
+	background-color: #fff;
+	margin-right: 0.5rem;
+	position: relative;
+	top: 3px;
+}
 
-	@media (max-width: 50rem){
-		.Beyco_title{
+.Beyco{
+	opacity: 0;
+	transition: 1s all ease; 
+}
+.Beyco.active{
+	transform: translateY(0);
+	opacity: 1;
+}
+
+
+@media (max-width: 50rem) {
+	.Beyco_title {
 		width: 90vw;
-	    }
 	}
-	@media (max-width:30rem){
-		.Beyco_title{
-			height: 25vh;
-		}
+}
+@media (max-width: 30rem) {
+	.Beyco_title {
+		height: 25vh;
 	}
-	@media (max-width:70rem){
-		.Beyco_title{
-		  padding: .5em;
-		  height: 22vh;
-		}
-	   
-	  }
+}
+@media (max-width: 70rem) {
+	.Beyco_title {
+		padding: 0.5em;
+		height: 22vh;
+	}
+}
