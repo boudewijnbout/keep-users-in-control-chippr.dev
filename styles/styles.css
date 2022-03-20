@@ -181,6 +181,15 @@ main{
 		position: relative;
 		top: 3px;
 	}
+	
+	.Beyco{
+		opacity: 0;
+		transition: 1s all ease; 
+	}
+	.Beyco.active{
+		transform: translateY(0);
+		opacity: 1;
+	}
 
 	@media (max-width: 50rem){
 		.Beyco_title{
