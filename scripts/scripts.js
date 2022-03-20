@@ -1,5 +1,5 @@
 const baseUrl = "https://chipr.api.fdnd.nl/projects"
-const h2 = document.querySelector(".hero_section h2")
+const p = document.querySelector(".Beyco_title p")
 const id = 1; 
 const reveals = document.querySelectorAll(".Beyco")
 
@@ -10,7 +10,7 @@ fetch (baseUrl)
 .then ((data)=>{
     beycoData =data.find((project)=> project.id===1)
     console.log(beycoData);
-    h2.innerText = `${beycoData.title}`
+    p.innerText = `${beycoData.short_description}`
 
 })
 
@@ -23,7 +23,7 @@ function reveal() {
       for (var i = 0; i < reveals.length; i++) {
       var windowHeight = window.innerHeight;
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
+      var elementVisible = 100;
   
       if (elementTop < windowHeight - elementVisible) {
         reveals[i].classList.add("active");
