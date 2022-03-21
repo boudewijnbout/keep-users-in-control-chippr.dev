@@ -1,27 +1,28 @@
-const baseUrl = "https://chipr.api.fdnd.nl/projects"
-const h2 = document.querySelector(".hero_section h2")
-const id = 1; 
-const reveals = document.querySelectorAll(".Beyco")
 
-fetch (baseUrl)
-.then ((res)=> {
+
+const baseUrl = "https://chipr.api.fdnd.nl/projects";
+const h2 = document.querySelector(".hero_section h2");
+const id = 1;
+const reveals = document.querySelectorAll(".Beyco");
+
+var images = [];
+
+fetch(baseUrl)
+  .then((res) => {
     return res.json();
-})
-.then ((data)=>{
-    beycoData =data.find((project)=> project.id===1)
+  })
+  .then((data) => {
+    beycoData = data.find((project) => project.id === 1);
     console.log(beycoData);
-    h2.innerText = `${beycoData.title}`
+    h2.innerText = `${beycoData.title}`;
+  });
 
-})
-
-function renderData(){
-}
-
+function renderData() {}
 
 //Scrol animation//
 
 function reveal() {
-    for (var i = 0; i < reveals.length; i++) {
+  for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var elementTop = reveals[i].getBoundingClientRect().top;
     var elementVisible = 100;
@@ -35,3 +36,7 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+
+
+
+

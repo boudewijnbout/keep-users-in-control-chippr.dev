@@ -143,9 +143,6 @@ header svg {
 main {
 	background-color: var(--secondary-bg);
 }
-.Beyco {
-	height: 100vh;
-}
 
 .Beyco_title {
 	display: flex;
@@ -202,3 +199,160 @@ main {
 		height: 22vh;
 	}
 }
+
+/*----------------------------------
+#Information Partner section
+-----------------------------------*/
+
+/* Split section */
+
+.general_information { 
+ 	display: grid;
+	 grid-template-columns: 1fr 1fr;
+	justify-content: center;
+
+}
+
+.split {
+    z-index: 1;
+    top: 0;
+    padding-top: 20px;
+	gap: 3em;
+
+  }
+  
+  .left {
+    left: 0;
+    color: white;
+  }
+
+  .left img {
+	width: 50%;
+  }
+
+   /* .test {
+	top: 0;
+	position: -webkit-sticky;
+	position: sticky;
+  } */
+
+  .right img {
+	width: 20em;
+	margin: 0 auto;
+	margin-top: 6em;
+	/* top: 0;
+	position: -webkit-sticky;
+	position: sticky; */
+	
+  }
+
+  .split p {
+	  margin: 0 auto;
+	  font-size: 1.2rem;
+	  width: 35em;
+	  top: 5em;
+	/* position: -webkit-sticky;
+	position: sticky; */
+  }
+
+  .right {
+	top: 0;
+	position: -webkit-sticky;
+	position: sticky;
+  }
+
+  
+
+
+
+ /*-----------------------------------------------------------
+# Partner
+-----------------------------------------------------------*/
+
+.partner {
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    gap: 1.8em;
+    background-color: #F7C117;
+    border-style: solid;
+    border-color: #F8F4F1;
+    border-width: 2em;
+    border-radius: 5em;
+}
+
+.partner p {
+    font-size: 20px;
+}
+
+.partner h1 {
+    font-size: 30px;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+/* Footer section */
+
+.footer ul li {
+    list-style: none;
+}
+
+.footer a {
+    color: #262626;
+}
+
+.footer {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    gap: 1.8em;
+    background-color: #262626;
+}
+
+/* social media icons*/
+.icon {
+    margin-top: 1em;
+    background-color: #F7C117;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+    box-shadow: 0 2px 3px rgb(0 0 0 / 12%), 0 2px 2px rgb(0 0 0 / 24%);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+/* Chippr icon / socials media hover effect */
+.icon:hover {
+    transform: translateY(-10px);
+    color: white;
+}
+
+.logo_c {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+}
+
+.logo_c:hover {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
