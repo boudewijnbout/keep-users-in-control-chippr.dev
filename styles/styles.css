@@ -103,7 +103,7 @@ header svg {
 	margin-top: -7em;
 	border-radius: 3em;
 	height: 70vh;
-	width: 75vw;
+	width: 75vw;;
 }
 
 .hero_section h1 {
@@ -142,6 +142,7 @@ header svg {
 --------------------------------------------------------------*/
 main {
 	background-color: var(--secondary-bg);
+		
 }
 .Beyco {
 	height: 100vh;
