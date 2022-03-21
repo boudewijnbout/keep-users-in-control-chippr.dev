@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../chippr-dev-api/.idea/chippr-dev-api.iml" filepath="$PROJECT_DIR$/../chippr-dev-api/.idea/chippr-dev-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/keep-users-in-control-chippr.dev.iml" filepath="$PROJECT_DIR$/.idea/keep-users-in-control-chippr.dev.iml" />
+    </modules>
+  </component>
+</project>

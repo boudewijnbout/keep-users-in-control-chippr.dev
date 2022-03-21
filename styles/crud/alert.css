@@ -1,0 +1,21 @@
+/*--------------------------------------------------------------
+# Alert
+--------------------------------------------------------------*/
+
+.alert {
+  display: none;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.25rem;
+}
+
+/* Alert Sucess */
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+}

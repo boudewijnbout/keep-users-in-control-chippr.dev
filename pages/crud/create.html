@@ -8,6 +8,8 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../../styles/crud/create.css" />
     <link rel="stylesheet" href="../../styles/crud/sidebar.css" />
+    <link rel="stylesheet" href="../../styles/crud/form.css" />
+    <link rel="stylesheet" href="../../styles/crud/alert.css" />
 
     <!-- Fonts -->
     <link
@@ -16,7 +18,7 @@
     />
 
     <!-- Page Title -->
-    <title>CRUD | Overzicht</title>
+    <title>CRUD | Toevoegen</title>
   </head>
   <body>
     <!-- Main Content -->
@@ -25,25 +27,58 @@
         <a href="index.html"><span>Projecten /</span></a> Toevoegen
       </h1>
 
-      <section>
-        <form action="http://localhost:3000/projects" method="POST">
+      <!-- Alerts -->
+      <div class="alert alert-success"></div>
+      <div class="alert alert-error"></div>
+
+      <!-- Add Project Form -->
+      <section class="create-project-form-wrapper">
+        <form
+          id="create-project-form"
+          action="https://chipr.api.fdnd.nl/projects"
+          method="POST"
+        >
+          <!-- Title Input -->
           <div class="form-group">
-            <label for="title">Titel</label>
-            <input type="text" name="title" id="title" />
-          </div>
-          <div class="form-group">
-            <label for="slug">Slug</label>
-            <input type="text" name="slug" id="slug" />
-          </div>
-          <div class="form-group">
-            <label for="description">Omschrijving</label>
-            <input type="text" name="description" id="description" />
-          </div>
-          <div class="form-group">
-            <label for="logo">Logo</label>
-            <input type="text" name="logo" id="logo" />
+            <label for="name">Bedrijfsnaam:</label>
+            <input required type="text" name="name" id="name" />
           </div>
 
+          <!-- Slug Input -->
+          <div class="form-group">
+            <label for="shortDescription">Korte omschrijving:</label>
+            <textarea
+              required
+              name="short_description"
+              id="short_description"
+            ></textarea>
+          </div>
+
+          <!-- Description Input -->
+          <div class="form-group">
+            <label for="description">Volledige omschrijving:</label>
+            <textarea required name="description" id="description"></textarea>
+          </div>
+
+          <!-- Logo Input -->
+          <div class="form-group">
+            <label for="logo">Logo:</label>
+            <input required type="text" name="logo" id="logo" />
+          </div>
+
+          <!-- Link Input -->
+          <div class="form-group">
+            <label for="link">Link:</label>
+            <input required type="text" name="link" id="link" />
+          </div>
+
+          <!-- `Banner Input -->
+          <div class="form-group">
+            <label for="main_img">Banner afbeelding:</label>
+            <input required type="text" name="main_img" id="main_img" />
+          </div>
+
+          <!-- Add Project Button -->
           <button type="submit">Project toevoegen</button>
         </form>
       </section>
