@@ -1,0 +1,171 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+header {
+  padding: 1rem 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  transition: all 300ms;
+  backdrop-filter: blur(5px);
+}
+
+/* Header navigation */
+header nav {
+  margin-left: auto;
+  display: flex;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header ul li {
+  color: #fff;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* Header Contact Button */
+header ul li a:nth-child(1) {
+  display: none;
+}
+
+header svg {
+  fill: #fff;
+}
+
+/* Header Scrolled Styling */
+.scrolled {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/*--------------------------------------------------------------
+# Animated menu
+--------------------------------------------------------------*/
+
+.animated-menu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+  /*background: var(--secondary-bg);*/
+  transform: translateY(-100%);
+  background: var(--secondary-bg);
+  transition: all 300ms;
+  display: grid;
+  /*grid-template-columns: 1fr 1fr;*/
+}
+
+.animated-menu.open {
+  transform: translateY(0);
+}
+
+/* Animated Menu Left Column */
+.animated-wrapper-left {
+  background-color: var(--secondary-bg);
+  padding: 6rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Animated Menu List */
+.animated-wrapper-left ul {
+  list-style: none;
+}
+
+/* Animated Menu List Item */
+.animated-wrapper-left ul li {
+  /*font-size: 3rem;*/
+  font-size: 2rem;
+  transition: 200ms;
+  margin-bottom: 1.25rem;
+  font-family: "Rubik", sans-serif;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.animated-wrapper-left ul li a {
+  color: #262626;
+}
+
+.animated-wrapper-left ul li:hover {
+  transform: translateX(20px);
+  opacity: 1;
+}
+
+.animated-wrapper-left ul li:hover:before {
+  opacity: 1;
+}
+
+.animated-wrapper-left ul li:before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 30px;
+  background-color: var(--accent-bg);
+  opacity: 0;
+  transition: all 300ms;
+}
+
+/* Right side of the menu */
+.animated-wrapper-right {
+  /*padding: 6rem 4rem;*/
+  display: none;
+}
+
+.animated-wrapper-right img {
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+  top: 3rem;
+}
+
+/*--------------------------------------------------------------
+# Media Query's
+--------------------------------------------------------------*/
+
+@media (min-width: 30rem) {
+  header ul li a:nth-child(1) {
+    display: block;
+  }
+}
+
+@media (min-width: 40rem) {
+  header {
+    padding: 1rem 4rem;
+  }
+
+  .animated-menu {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .animated-wrapper-left {
+    background-color: var(--main-bg);
+    padding: 6rem 4rem;
+  }
+
+  .animated-wrapper-left ul li a {
+    color: #fff;
+  }
+
+  .animated-wrapper-right {
+    display: block;
+    /*margin: 6rem 4rem;*/
+    background-image: url("../assets/images/team-1.jpeg");
+    background-size: cover;
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .animated-wrapper-left ul li {
+    font-size: 3rem;
+  }
+}
