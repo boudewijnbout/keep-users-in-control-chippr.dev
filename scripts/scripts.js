@@ -3,7 +3,7 @@
 const baseUrl = "https://chipr.api.fdnd.nl/projects";
 const h2 = document.querySelector(".hero_section h2");
 const id = 1;
-const reveals = document.querySelectorAll(".Beyco");
+const reveals = document.querySelectorAll(".description");
 
 var images = [];
 
