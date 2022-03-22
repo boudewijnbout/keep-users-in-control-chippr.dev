@@ -41,6 +41,17 @@ form button {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all 200ms;
+}
+
+form button:hover {
+  background-color: #e8b617;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+form button:active {
+  transform: translateY(-1px) scale(0.95);
 }
 
 /*--------------------------------------------------------------

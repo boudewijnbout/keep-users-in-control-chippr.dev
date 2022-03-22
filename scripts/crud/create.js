@@ -1,5 +1,5 @@
 const createProjectForm = document.querySelector("#create-project-form");
-const apiUrl = "https://chipr.api.fdnd.nl/projects";
+const apiUrl = "https://chipr.api.fdnd.nl/v1/project";
 const alertSuccess = document.querySelector(".alert-success");
 const alertError = document.querySelector(".alert-error");
 
@@ -37,7 +37,6 @@ createProjectForm.addEventListener("submit", function (e) {
     })
     .catch((error) => {
       // Show error message
-
       alertError.innerText = "Oops, project is niet toegevoegd.";
       alertError.style.display = "inline-block";
 
@@ -46,5 +45,7 @@ createProjectForm.addEventListener("submit", function (e) {
         top: 0,
         behavior: "smooth",
       });
+
+      console.log(error);
     });
 });
