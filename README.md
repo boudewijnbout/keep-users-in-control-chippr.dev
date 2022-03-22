@@ -1,32 +1,54 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+# FDND API Crud Page
+![Schermafbeelding Homepagina](assets/images/screenshot-homepage.png)
 
-# Titel
-<!-- Geef je project een titel en schrijf in één zin wat het is -->
+Dit project omvat een CRUD waarmee de API van FDND kan worden beheerd.
 
-## Inhoudsopgave
+## 📚 Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
+* [Beschrijving](#beschrijving)
+* [Kenmerken](#kenmerken)
+* [Installatie](#installatie)
+* [Gebruik](#gebruik)
+* [Bronnen](#bronnen)
+* [Licentie](#licentie)
 
-## Beschrijving
-<!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
-<!-- Voeg een mooie poster visual toe 📸 -->
-<!-- Voeg een link toe naar Github Pages 🌐-->
+## ⚡ Kenmerken
+Dit project is gemaakt met HTML, CSS en JavaScript. Verder staat hieronder een korte lijst met gebruikte tools en middelen.
 
-## Kenmerken
-<!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+**Tools**
 
-## Installatie
+- 🖥️ Webstorm & Visual Studio Code
+- 🔥 Adobe XD
+- ✍ Pen & Papier
 
-## Gebruik
+**Gebruikte technieken**
 
-## Bronnen
+- 📟 HTML
+- ⌚ CSS
+- 📲 JavaScript
 
-## Licentie
+## 📥 Installatie
+
+1. Clone of download deze respository.
+2. Ga naar de root directory van het project.
+3. Open het `index.html` bestand, hierdoor wordt de homepagina (CRUD) van de website geopend.
+
+## 🔨 Gebruik
+
+Op de CRUD wordt gebruik gemaakt van een tabel, gebruik de knop "Voeg student toe" om een nieuwe student toe te voegen, in de sidebar is het mogelijk om terug te navigeren naar de algemene overzichts pagina waarop alle studenten worden getoond.
+
+## 🔗 Handige links
+
+[Wiki](https://github.com/boudewijnbout/the-startup-chipper.dev/wiki)
+
+## 📖 Bronnen
+[HTML5](https://www.w3schools.com/html/)
+<br>
+[CSS3](https://www.w3schools.com/css/)
+<br>
+[JavaScript](https://www.w3schools.com/js/)
+
+## 🔓 Licentie
 
 ![GNU GPL V3](https://www.gnu.org/graphics/gplv3-127x51.png)
 
