@@ -1,7 +1,7 @@
-# FDND API Crud Page
+# Chippr.dev Detailpage & API
 ![Schermafbeelding Homepagina](assets/images/screenshot-homepage.png)
 
-Dit project omvat een CRUD waarmee de API van FDND kan worden beheerd.
+Dit project omvat een detailpagina voor een project uitgevoerd door Chippr, waarbij de data afkomstig is vanuit de voor Chippr gemaakte API. Daarnaast is er ook eeN CRUD gemaakt waarin de API kan worden beheerd.
 
 ## 📚 Inhoudsopgave
 
