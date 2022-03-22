@@ -1,6 +1,9 @@
 const query = window.location.search;
 const projectId = new URLSearchParams(query).get("id");
 const projectName = document.querySelector("main h1 span:nth-child(2)");
+const alertSuccess = document.querySelector(".alert-success");
+const alertError = document.querySelector(".alert-error");
+const apiUrl = "https://chipr.api.fdnd.nl/v1/project";
 
 const nameInput = document.querySelector(".form-group #name");
 const shortDescription = document.querySelector(
@@ -8,20 +11,20 @@ const shortDescription = document.querySelector(
 );
 const descriptionInput = document.querySelector(".form-group #description");
 const logoInput = document.querySelector(".form-group #logo");
+const linkInput = document.querySelector(".form-group #link");
 const main_img = document.querySelector(".form-group #main_img");
 const idInput = document.querySelector("#id");
 const updateProjectForm = document.querySelector("#edit-project-form");
-const apiUrl = "https://chipr.api.fdnd.nl/projects";
 
 render();
 setFormData();
 
 // Get data according to ID
 async function getProjectById() {
-  const req = await fetch("https://chipr.api.fdnd.nl/projects");
+  const req = await fetch("https://chipr.api.fdnd.nl/v1/project");
   const res = await req.json();
 
-  return res.find((project) => project.id == projectId);
+  return res.data.find((project) => project.id == projectId);
 }
 
 // Render the project name in the breadcrumb
@@ -40,6 +43,7 @@ async function setFormData() {
   shortDescription.value = `${project.short_description}`;
   descriptionInput.value = `${project.description}`;
   logoInput.value = `${project.logo}`;
+  linkInput.value = `${project.link}`;
   main_img.value = `${project.main_img}`;
 }
 
@@ -65,7 +69,29 @@ updateProjectForm.addEventListener("submit", function (e) {
     body: JSON.stringify(data),
   })
     .then(function (res) {
+      // // Show success message
+      alertSuccess.innerText = "Gelukt! Project is aangepast.";
+      alertSuccess.style.display = "inline-block";
+
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
       return res.json;
     })
-    .catch((error) => console.log(error));
+    .catch((error) => {
+      // Show error message
+      alertError.innerText = "Oops, project is niet aangepast.";
+      alertError.style.display = "inline-block";
+
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+
+      console.log(error);
+    });
 });
