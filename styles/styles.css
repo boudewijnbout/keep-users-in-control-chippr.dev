@@ -97,14 +97,16 @@ header svg {
   height: 100vh;
   background-color: var(--main-bg);
   margin-bottom: 5em;
+  background-image: url("../assets/Schermafbeelding\ 2022-03-21\ om\ 13.18.32.png");
+  background-attachment: fixed;
 }
 
 .hero_section img {
   /* padding: 10em; */
   margin-top: -7em;
   border-radius: 3em;
-  height: 70vh;
-  width: 75vw;
+  height: 75%;
+  width: 70%;
 }
 
 .hero_section h1 {
@@ -127,8 +129,8 @@ header svg {
 
 @media (max-width: 50rem) {
   .hero_section img {
-    height: 60vh;
-    width: 90vw;
+    height: 65%;
+    width: 98%;
   }
   .hero_section :nth-child(2) {
     position: relative;
@@ -257,9 +259,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .description_bottom{
-    margin-left:-13em;
-  }
+ 
   .general{
     margin-top: -2em;
   }
@@ -272,7 +272,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-left: 14em;
   background-color: var(--accent-bg);
   margin-top: 3em;
   width: 80vw;
