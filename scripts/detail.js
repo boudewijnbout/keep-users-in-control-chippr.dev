@@ -17,21 +17,27 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-const titel = document.querySelector("h1");
 const query = window.location.search;
 const projectId = new URLSearchParams(query).get("id");
+const projectText = document.querySelector(".general-paragraph");
+const projectImage = document.querySelector(".general img");
 
 render();
 
 async function getProjectById() {
   const req = await fetch("https://chipr.api.fdnd.nl/v1/project");
   const res = await req.json();
-
+  
   return res.data.find((project) => project.id == projectId);
 }
 
 async function render() {
   const project = await getProjectById();
-
-  titel.innerText = `${project.name}`;
+  
+  projectText.insertAdjacentHTML("beforeend", 
+    `
+    <img src="${project.logo}" />
+    <p>${project.description}<p>
+    `
+  )
 }
