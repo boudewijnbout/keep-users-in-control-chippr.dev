@@ -53,13 +53,13 @@ updateProjectForm.addEventListener("submit", function (e) {
 
   // Create a data object with data from the update form
   let data = {
-    id: document.querySelector("#id").value,
-    name: document.querySelector("#name").value,
-    short_description: document.querySelector("#short_description").value,
-    description: document.querySelector("#description").value,
-    logo: document.querySelector("#logo").value,
-    link: document.querySelector("#link").value,
-    main_img: document.querySelector("#main_img").value,
+    id: idInput.value,
+    name: nameInput.value,
+    short_description: shortDescription.value,
+    description: descriptionInput.value,
+    logo: logoInput.value,
+    link: linkInput.value,
+    main_img: main_img.value,
   };
 
   // PATCH the new data to the API

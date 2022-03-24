@@ -1,7 +1,13 @@
 const createProjectForm = document.querySelector("#create-project-form");
-const apiUrl = "https://chipr.api.fdnd.nl/v1/project";
 const alertSuccess = document.querySelector(".alert-success");
 const alertError = document.querySelector(".alert-error");
+const nameInput = document.querySelector("#name");
+const shortDescription = document.querySelector("#short_description");
+const description = document.querySelector("#description");
+const logo = document.querySelector("#logo");
+const link = document.querySelector("#link");
+const main_img = document.querySelector("#main_img");
+const apiUrl = "https://chipr.api.fdnd.nl/v1/project";
 
 // Create a submit listener
 createProjectForm.addEventListener("submit", function (e) {
@@ -9,12 +15,12 @@ createProjectForm.addEventListener("submit", function (e) {
 
   // Create a data object with data from the create form.
   let data = {
-    name: document.querySelector("#name").value,
-    short_description: document.querySelector("#short_description").value,
-    description: document.querySelector("#description").value,
-    logo: document.querySelector("#logo").value,
-    link: document.querySelector("#link").value,
-    main_img: document.querySelector("#main_img").value,
+    name: nameInput.value,
+    short_description: shortDescription.value,
+    description: description.value,
+    logo: logo.value,
+    link: link.value,
+    main_img: main_img.value,
   };
 
   fetch(apiUrl, {
