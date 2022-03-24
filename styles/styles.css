@@ -128,10 +128,6 @@ header svg {
 }
 
 @media (max-width: 50rem) {
-  .hero_section img {
-    height: 65%;
-    width: 98%;
-  }
   .hero_section :nth-child(2) {
     position: relative;
     bottom: -9%;
@@ -226,26 +222,22 @@ main {
 }
 
 .images img {
-  width: 55em;
-  height: 40em;
+  width: 100%;
+  margin-bottom: 1rem;
   padding-left: 6em;
-  margin: 1em;
- 
-  /* height: 80vh;
-  width: 55vw; */
 }
 
 .text img {
-  width: 7em;
-  margin: 0 auto;
+  max-width: 7em;
+  margin-left: 1em;
   margin-top: 4em;
   margin-bottom: 1em;
 }
 
 .general p {
-  margin: 0 auto;
   font-size: 17px;
-  width:22em;
+  max-width: 22em;
+  margin-left:1em;
   top: 5em;
   text-align: left;
   line-height: 1.2em;
@@ -258,7 +250,11 @@ main {
   text-align: center;
 }
 .general button{
-  margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5em;
+  margin-top: 1.5em;
   width: 10em;
   height: 4em;
   border-style: none;
@@ -266,21 +262,30 @@ main {
   background-color: var(--main-bg);
   color: var(--secondary-bg);
 }
-@media (max-width:50rem){
+
+@media (max-width:70rem){
+
   .general_information{
-    display: grid;
-    grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
   }
  
   .general{
-    margin-top: -2em;
+    margin-top: -3em;
   }
-   
+
+  .images img{
+    width:100%;
+    height:auto ;
+    padding-left: 1em;
+  }
 }
+
 /*-----------------------------------------------------------
 # Partner
 -----------------------------------------------------------*/
-.more_link {
+/* .more_link {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -293,9 +298,9 @@ main {
   font-size: 22px;
   padding-left: 2em;
   margin-bottom: 1em;
-}
+} */
 
-.more_link h2::before {
+/* .more_link h2::before {
   content: "";
   display: inline-block;
   width: 4px;
@@ -313,7 +318,7 @@ main {
 
 .more_link h2 {
   padding: 0.4em;
-}
+} */
 
 /*--------------------------------------------------------------
 # Footer
@@ -346,7 +351,6 @@ main {
   width: 40px;
   height: 40px;
   display: flex;
-
   justify-content: center;
   align-items: center;
   transition: transform 0.5s, box-shadow 0.5s;
@@ -381,21 +385,22 @@ main {
  .related_projects{
    display: flex;
    flex-direction: row;
+   justify-content: start;
+   align-items: flex-start;
  }
  .projects h2{
-   padding-left:7em;
-   margin-bottom: 3em;
+    margin-left:6em; 
+    margin-bottom: 3em; 
  }
  
   .projects img{
-    width: 20%;
-    height: 10em;
-    padding: 1em;
-    margin-left: 9em;
+    max-width: 25em;
+    height: 5em;
+    margin-left: 9em; 
 
   }
 
-  .projects h2::before {
+  .projects h2::before{
     content: "";
     display: inline-block;
     width: 4px;
@@ -404,4 +409,18 @@ main {
     margin-right: 0.5rem;
     position: relative;
     top: 3px;
+  }
+
+  @media (max-width:50rem){
+    .projects{
+     display: flex;
+     flex-direction: column;
+     margin-top: 2em;
+    }
+
+    .projects img{
+      max-width: 45%;
+      margin-bottom: 3em;
+
+    }
   }
