@@ -21,6 +21,8 @@ const query = window.location.search;
 const projectId = new URLSearchParams(query).get("id");
 const projectText = document.querySelector(".general-paragraph");
 const projectImage = document.querySelector(".general img");
+const projectTitle = document.querySelector(".description_title p")
+const projectDescription = document.querySelector(".short_description")
 
 render();
 
@@ -34,10 +36,19 @@ async function getProjectById() {
 async function render() {
   const project = await getProjectById();
   
-  projectText.insertAdjacentHTML("beforeend", 
+  projectText.insertAdjacentHTML("afterbegin", 
     `
     <img src="${project.logo}" />
     <p>${project.description}<p>
     `
   )
 }
+
+//welcome to section//
+
+// async function render() {
+//   const project = await getProjectById();
+
+//   projectTitle.innerText = `${project.name}`;
+//   projectDescription.innerText = `${project.short_description}`;
+// }
