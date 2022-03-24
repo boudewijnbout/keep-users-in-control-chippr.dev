@@ -53,13 +53,13 @@ updateProjectForm.addEventListener("submit", function (e) {
 
   // Create a data object with data from the update form
   let data = {
-    id: document.querySelector("#id").value,
-    name: document.querySelector("#name").value,
-    short_description: document.querySelector("#short_description").value,
-    description: document.querySelector("#description").value,
-    logo: document.querySelector("#logo").value,
-    link: document.querySelector("#link").value,
-    main_img: document.querySelector("#main_img").value,
+    id: idInput.value,
+    name: nameInput.value,
+    short_description: shortDescription.value,
+    description: descriptionInput.value,
+    logo: logoInput.value,
+    link: linkInput.value,
+    main_img: main_img.value,
   };
 
   // PATCH the new data to the API
@@ -71,7 +71,7 @@ updateProjectForm.addEventListener("submit", function (e) {
     .then(function (res) {
       // // Show success message
       alertSuccess.innerText = "Gelukt! Project is aangepast.";
-      alertSuccess.style.display = "inline-block";
+      alertSuccess.classList.add("visible");
 
       // Scroll to the top of the page
       window.scrollTo({
@@ -84,7 +84,7 @@ updateProjectForm.addEventListener("submit", function (e) {
     .catch((error) => {
       // Show error message
       alertError.innerText = "Oops, project is niet aangepast.";
-      alertError.style.display = "inline-block";
+      alertError.classList.add("visible");
 
       // Scroll to the top of the page
       window.scrollTo({
