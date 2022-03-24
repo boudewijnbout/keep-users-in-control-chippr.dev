@@ -71,7 +71,7 @@ updateProjectForm.addEventListener("submit", function (e) {
     .then(function (res) {
       // // Show success message
       alertSuccess.innerText = "Gelukt! Project is aangepast.";
-      alertSuccess.style.display = "inline-block";
+      alertSuccess.classList.add("visible");
 
       // Scroll to the top of the page
       window.scrollTo({
@@ -84,7 +84,7 @@ updateProjectForm.addEventListener("submit", function (e) {
     .catch((error) => {
       // Show error message
       alertError.innerText = "Oops, project is niet aangepast.";
-      alertError.style.display = "inline-block";
+      alertError.classList.add("visible");
 
       // Scroll to the top of the page
       window.scrollTo({
