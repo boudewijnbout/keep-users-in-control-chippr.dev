@@ -24,6 +24,7 @@ const projectImage = document.querySelector(".general img");
 const projectTitle = document.querySelector(".description_title p")
 const projectDescription = document.querySelector(".short_description")
 
+renderGeneral();
 render();
 
 async function getProjectById() {
@@ -31,6 +32,15 @@ async function getProjectById() {
   const res = await req.json();
   
   return res.data.find((project) => project.id == projectId);
+}
+
+//welcome to section//
+
+async function renderGeneral() {
+  const project = await getProjectById();
+
+  projectTitle.innerText = `${project.name}`;
+  projectDescription.innerText = `${project.short_description}`;
 }
 
 async function render() {
@@ -44,11 +54,3 @@ async function render() {
   )
 }
 
-//welcome to section//
-
-// async function render() {
-//   const project = await getProjectById();
-
-//   projectTitle.innerText = `${project.name}`;
-//   projectDescription.innerText = `${project.short_description}`;
-// }
